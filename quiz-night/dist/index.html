@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Turn your living room into a game show. A free Jeopardy-style trivia game with 540 clues, 36 categories, and room for all your favorite rivals.">
+  <title>Quiz Night — A little friendly competition.</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <button class="brand" id="home-button" aria-label="Quiz Night home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>quiz night<span class="brand-dot">.</span></button>
+    <span class="header-tagline">GOOD COMPANY. GREAT QUESTIONS.</span>
+    <nav aria-label="Game controls"><button class="text-button" id="how-button"><span class="help-icon">?</span>How to play</button><button class="icon-button" id="sound-button" aria-label="Turn sound on" title="Turn sound on"></button></nav>
+  </header>
+  <main id="app"></main>
+  <footer class="site-footer"><span>A little friendly competition goes a long way.</span><span>Made for game night <span class="tiny-star">✦</span></span></footer>
+  <dialog id="clue-dialog" class="clue-dialog" aria-labelledby="clue-heading"></dialog>
+  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
