@@ -10,6 +10,7 @@ A complete Jeopardy-style game for a shared screen, built with HTML, CSS, and Ja
 - Scoreboard, undo, final rankings with ties, and rematches.
 - Automatic browser-local saves and preference for questions not recently played.
 - Responsive layout, keyboard controls, reduced-motion support, and optional sounds.
+- Light/dark mode via the sun/moon button. Follows your device initially and remembers your choice in this browser.
 
 ## Run locally
 

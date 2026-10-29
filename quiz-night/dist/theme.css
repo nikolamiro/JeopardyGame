@@ -1,0 +1,109 @@
+:root { color-scheme: light; }
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #17141e;
+  --ink: #f0eaf7;
+  --muted: #afa6bd;
+  --line: #3c3449;
+  --purple: #bb9af5;
+  --purple-dark: #2c1e43;
+  --lavender: #332640;
+  --white: #221d2c;
+  --green: #a2d5b9;
+  --red: #f2b1b5;
+  --surface: #221d2c;
+  --surface-raised: #2d2638;
+  --accent-border: #80619f;
+}
+
+/* The original game board stays purple; surrounding surfaces become warm charcoal. */
+[data-theme="dark"] .setup-card,
+[data-theme="dark"] .score-card,
+[data-theme="dark"] .round-pill,
+[data-theme="dark"] .leader-row,
+[data-theme="dark"] .answer-player,
+[data-theme="dark"] .secondary-button,
+[data-theme="dark"] .round-option {
+  background: var(--surface);
+}
+
+[data-theme="dark"] .setup-card,
+[data-theme="dark"] .player-input,
+[data-theme="dark"] .game-options,
+[data-theme="dark"] .section-heading h2 span,
+[data-theme="dark"] kbd {
+  border-color: var(--line);
+}
+
+[data-theme="dark"] .player-input,
+[data-theme="dark"] .stepper button,
+[data-theme="dark"] kbd,
+[data-theme="dark"] .icon-button:hover,
+[data-theme="dark"] .secondary-button:hover {
+  background: var(--surface-raised);
+}
+
+[data-theme="dark"] .player-input input,
+[data-theme="dark"] dialog { color: var(--ink); }
+
+[data-theme="dark"] .hero-description,
+[data-theme="dark"] .hero-note,
+[data-theme="dark"] .header-tagline,
+[data-theme="dark"] .setup-footnote,
+[data-theme="dark"] .preview-bottom,
+[data-theme="dark"] .rank { color: var(--muted); }
+
+[data-theme="dark"] .hero-note svg,
+[data-theme="dark"] .setting-label svg { stroke: var(--muted); }
+[data-theme="dark"] .hero h1 span:after { border-color: #7f629e; }
+
+[data-theme="dark"] .round-option.selected,
+[data-theme="dark"] .round-option:hover,
+[data-theme="dark"] .answer-player.selected,
+[data-theme="dark"] .leader-row.winner {
+  color: var(--ink);
+  background: var(--lavender);
+  border-color: var(--accent-border);
+}
+
+[data-theme="dark"] .primary-button { background: #7955d5; color: #fff; }
+[data-theme="dark"] .primary-button:hover { background: #6c48c3; }
+[data-theme="dark"] .switch { background: #554b63; }
+[data-theme="dark"] .switch:checked { background: #9975e4; }
+[data-theme="dark"] .switch:before { background: #fff; }
+[data-theme="dark"] .stepper button:hover:not(:disabled) { background: #443452; }
+
+[data-theme="dark"] .resume-banner,
+[data-theme="dark"] .round-finish { border-color: var(--accent-border); }
+[data-theme="dark"] .your-pick { color: var(--ink); background: var(--surface-raised); }
+[data-theme="dark"] .progress-track { background: var(--line); }
+[data-theme="dark"] .board-wrap { box-shadow: 0 7px 0 #241c32; }
+[data-theme="dark"] .result-badge { background: var(--lavender); }
+
+[data-theme="dark"] .preview-board { background: #211b2d; border-color: var(--line); }
+[data-theme="dark"] .preview-category { background: #272032; color: #c7b4df; }
+[data-theme="dark"] .preview-category span { color: var(--purple); }
+[data-theme="dark"] .preview-value { background: #362747; border-color: #4a365f; color: #d2b8ef; }
+[data-theme="dark"] .preview-value:nth-child(3) { background: #30243f; }
+[data-theme="dark"] .preview-value:nth-child(4) { background: #2b2138; }
+
+[data-theme="dark"] dialog { box-shadow: 0 25px 100px #0008; }
+[data-theme="dark"] dialog::backdrop { background: #0b0813ba; }
+[data-theme="dark"] .clue-close:hover { background: #ffffff15; }
+[data-theme="dark"] .answer-panel { background: #25322b; border-color: #43584a; }
+[data-theme="dark"] .answer-panel span { color: #abc8af; }
+[data-theme="dark"] .answer-panel p { color: #c2e5c8; }
+[data-theme="dark"] .judge-button { background: #233a31; border-color: #426a55; color: #b1e5c7; }
+[data-theme="dark"] .judge-button:hover { background: #2d483a; }
+[data-theme="dark"] .judge-button.incorrect { background: #42282e; border-color: #79515a; color: #f5bfc0; }
+[data-theme="dark"] .judge-button.incorrect:hover { background: #50313a; }
+[data-theme="dark"] .toast { background: #e7dcf4; color: #292033; }
+
+/* Keep all three header controls reachable on compact phones. */
+.site-header nav .icon-button { flex-shrink: 0; }
+@media (max-width: 700px) { .site-header nav { gap: 10px; } }
+@media (max-width: 400px) {
+  #how-button { width: 32px; height: 32px; padding: 0; }
+  .help-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
