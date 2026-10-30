@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "node quiz-night/server.mjs",
-    "test": "node --test quiz-night/tests/engine.test.mjs",
-    "test:browser": "node quiz-night/tests/browser.mjs"
+    "test": "node --test quiz-night/tests/engine.test.mjs quiz-night/tests/i18n.test.mjs",
+    "test:browser": "node quiz-night/tests/browser.mjs",
+    "test:language": "node quiz-night/tests/language-browser.mjs"
   },
   "devDependencies": {
     "playwright-core": "^1.64.1"

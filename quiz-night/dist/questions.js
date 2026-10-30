@@ -297,7 +297,7 @@ This symbol separates the username and domain in an email address.|The @ symbol
 These three letters stand for Central Processing Unit.|CPU
 This type of software is used to visit websites.|A web browser
 This wireless technology shares its name with a color and a body part.|Bluetooth
-These three letters stand for Hypertext Markup Language.|HTML
+These four letters stand for Hypertext Markup Language.|HTML
 This number system uses only zero and one.|Binary
 This type of malicious software locks files and demands payment.|Ransomware
 This British computer scientist invented the World Wide Web.|Tim Berners-Lee

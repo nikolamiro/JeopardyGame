@@ -10,13 +10,14 @@
   <script src="./theme.js"></script>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./theme.css">
+  <link rel="stylesheet" href="./language.css">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
   <header class="site-header">
     <button class="brand" id="home-button" aria-label="Quiz Night home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>quiz night<span class="brand-dot">.</span></button>
     <span class="header-tagline">GOOD COMPANY. GREAT QUESTIONS.</span>
-    <nav aria-label="Game controls"><button class="text-button" id="how-button"><span class="help-icon">?</span><span class="help-label">How to play</span></button><button class="icon-button" id="theme-button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false"></button><button class="icon-button" id="sound-button" aria-label="Turn sound on" title="Turn sound on"></button></nav>
+    <nav aria-label="Game controls"><select id="language-select" aria-label="Language"><option value="en" lang="en">English</option><option value="sv" lang="sv">Svenska</option></select><button class="text-button" id="how-button"><span class="help-icon">?</span><span class="help-label">How to play</span></button><button class="icon-button" id="theme-button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false"></button><button class="icon-button" id="sound-button" aria-label="Turn sound on" title="Turn sound on"></button></nav>
   </header>
   <main id="app"></main>
   <footer class="site-footer"><span>A little friendly competition goes a long way.</span><span>Made for game night <span class="tiny-star">✦</span></span></footer>

@@ -15,7 +15,9 @@
     document.querySelector('meta[name="theme-color"]').content = dark ? '#17141e' : '#f6f5f0';
     const button = document.getElementById('theme-button');
     if (!button) return;
-    const label = `Switch to ${dark ? 'light' : 'dark'} mode`;
+    const label = document.documentElement.lang === 'sv'
+      ? `Byt till ${dark ? 'ljust' : 'mörkt'} läge`
+      : `Switch to ${dark ? 'light' : 'dark'} mode`;
     button.setAttribute('aria-label', label);
     button.setAttribute('aria-pressed', String(dark));
     button.title = label;
@@ -25,6 +27,7 @@
   }
 
   applyTheme();
+  window.addEventListener('quiz-night-languagechange', applyTheme);
   system.addEventListener('change', () => { if (!preference) applyTheme(); });
   document.addEventListener('DOMContentLoaded', () => {
     applyTheme();

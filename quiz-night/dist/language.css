@@ -1,0 +1,43 @@
+#language-select {
+  font: 500 12px var(--font);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  height: 37px;
+  padding: 0 8px;
+  max-width: 105px;
+  cursor: pointer;
+}
+#language-select:focus-visible { outline: 3px solid #af91ed; outline-offset: 4px; }
+.game-tools { flex-shrink: 0; }
+.round-pill { white-space: nowrap; }
+html[lang="sv"] .hero h1 { font-size: clamp(40px, 4vw, 59px); letter-spacing: -2.6px; }
+html[lang="sv"] .hero h1 span { overflow-wrap: anywhere; }
+html[lang="sv"] .clue-tile { white-space: nowrap; }
+html[lang="sv"] .toggle-label span small { display: inline-block; }
+@media (max-width: 1150px) { .header-tagline { display: none; } }
+@media (max-width: 850px) { html[lang="sv"] .hero h1 { font-size: 38px; letter-spacing: -1.8px; } }
+@media (max-width: 700px) {
+  .site-header { flex-wrap: wrap; height: auto; min-height: 100px; gap: 13px; padding-top: 17px; padding-bottom: 17px; }
+  .site-header nav { gap: 9px; }
+  #language-select { height: 32px; font-size: 11px; }
+  #how-button { width: 32px; height: 32px; padding: 0; }
+  .help-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  html[lang="sv"] .hero h1 { font-size: clamp(32px, 8.3vw, 48px); letter-spacing: -1.5px; }
+  html[lang="sv"] .hero-stats { gap: 16px; }
+  html[lang="sv"] .hero-stat + .hero-stat { padding-left: 16px; }
+  html[lang="sv"] .hero-note { font-size: 10px; }
+  html[lang="sv"] .category-header { hyphens: auto; }
+  html[lang="sv"] .board-bottom { row-gap: 5px; }
+  html[lang="sv"] .score-heading { gap: 10px; }
+  html[lang="sv"] .toggle-label span small { display: block; margin: 3px 0 0; }
+  .game-topbar > div:first-child { min-width: 0; }
+  html[lang="sv"] .game-title { font-size: 21px; }
+  html[lang="sv"] .site-footer { gap: 12px; }
+}
+@media (max-width: 400px) {
+  .site-header nav { width: 100%; justify-content: flex-end; }
+  .site-header { padding-top: 14px; padding-bottom: 14px; }
+  #language-select { margin-right: auto; }
+}

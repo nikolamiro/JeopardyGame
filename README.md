@@ -11,6 +11,7 @@ A complete Jeopardy-style game for a shared screen, built with HTML, CSS, and Ja
 - Automatic browser-local saves and preference for questions not recently played.
 - Responsive layout, keyboard controls, reduced-motion support, and optional sounds.
 - Light/dark mode via the sun/moon button. Follows your device initially and remembers your choice in this browser.
+- English/Swedish selector with all 540 clues, answers, categories, instructions, and controls translated. Language changes preserve the match and are remembered in this browser.
 
 ## Run locally
 
@@ -30,12 +31,15 @@ Clear all 30 clues to advance. The highest final total wins; tied players share 
 
 In a clue, **1–8** selects a player, **Space** reveals the answer, **C/I** marks correct/incorrect, and **Escape** returns to the board. Game setup preserves an unfinished match so it can be resumed. Saved games belong to the current browser and device; this is a local shared-screen game, not online multiplayer.
 
+Choose **Svenska** in the header to play in Swedish. **R/F** also marks right/wrong answers in Swedish. Custom player names stay unchanged. Both languages use the same question IDs, so switching language preserves saved games and recently played question history.
+
 ## Checks
 
 ```sh
 npm test
 npm install
 npm run test:browser
+npm run test:language
 ```
 
 The browser check uses `playwright-core` with an existing Chrome or Edge installation. Set `CHROME_PATH` if automatic detection does not find it. It exercises complete games and captures desktop/mobile screenshots in `quiz-night/test-results/`.
@@ -44,6 +48,9 @@ The browser check uses `playwright-core` with an existing Chrome or Edge install
 
 - `quiz-night/dist/`: deployable static website; no build step.
 - `quiz-night/dist/questions.js`: question bank; every category has three clues per difficulty tier.
+- `quiz-night/dist/questions-sv.js`: Swedish clues and answers sharing the English question IDs.
+- `quiz-night/dist/i18n.js`: interface translations, language preference, and number formatting.
+- `quiz-night/dist/views.js`: localized game screens and dialogs.
 - `quiz-night/dist/engine.js`: game rules, randomization, scoring, and save validation.
 - `quiz-night/dist/app.js`: screens, dialogs, audio, timers, and browser storage.
 - `quiz-night/server.mjs`: small local preview server.
